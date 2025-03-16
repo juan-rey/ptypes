@@ -95,6 +95,14 @@ PTYPES_BEGIN
 #endif
 
 
+#if defined(WIN32) && !defined(EHOSTDOWN)
+#define EHOSTDOWN       10064L
+#endif
+
+#if defined(WIN32) && !defined(EPFNOSUPPORT)
+#define EPFNOSUPPORT    10046L
+#endif
+
 // shutdown() constants
 
 #if defined(SD_RECEIVE) && !defined(SHUT_RD)
